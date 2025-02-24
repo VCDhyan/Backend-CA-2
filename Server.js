@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 // Signup Route
-app.get("/signup", (req, res) => {
+app.get("/login", (req, res) => {
   const { username, email, password, dob } = req.query;
 
   // Validating username
@@ -28,7 +28,7 @@ app.get("/signup", (req, res) => {
     return res.status(400).json({ error: "Password must be 8-16 characters long and can include letters, numbers, and special characters (@, $, &, !)." });
   }
 
-  res.send("Signup Successful");
+  res.send("Login Successful");
 });
 
 // Start Server
